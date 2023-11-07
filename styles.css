@@ -194,5 +194,6 @@
     display: flex; 
     width: 80%; 
     margin-bottom: 50px; 
+    overflow: auto; 
   }
 }
