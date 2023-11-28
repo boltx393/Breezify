@@ -1,240 +1,192 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Weather Application</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>UI - Weather App</title>
+        <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <div class = "background">
-            <div class = "left">
-                <div class = "left-img-1">
-                    <img src = "icons/weather-app.png"> 
-                </div>
-                <div class = "left-img-2">
-                    <table >
-                        <tr>
-                            <table>
-                                <tr><img src = "icons/Weather.png"</tr>
-                                <tr>Weather</tr>
-                            </table>
-                        </tr>
-                        <tr>
-                            <table>
-                                <tr><img src = "icons/architecture-and-city.png"></tr>
-                                <tr>Cities</tr>
-                            </table>
-                        </tr>
-                        <tr>
-                            <table>
-                                <tr><img src = "icons/map.png"></tr>
-                                <tr>Maps</tr>
-                            </table>
-                        </tr>
-                        <tr>
-                            <table>
-                                <tr><img src = "icons/levels.png"></tr>
-                                <tr>Settings</tr>
-                            </table>
-                        </tr>
-                    </table>
-                </div>
+        <div class="container app">
+            <!-- Left Navigation Bar -->
+            <div class="navbar">
+                <a href = "./index.html"><img src="./assets/icons/logo.png" alt="logo" class="logo" /></a>
+
+                <!-- Navigation Links -->
+                <a href="/">
+                    <img src="./assets/icons/weather.png" alt="Weather" />
+                    <span>Weather</span>
+                </a>
+
+                <a href="/">
+                    <img src="./assets/icons/list.png" alt="Cities" />
+                    <span>Cities</span>
+                </a>
+
+                <a href="/">
+                    <img src="./assets/icons/map.png" alt="Map" />
+                    <span>Map</span>
+                </a>
+
+                <a href="/">
+                    <img src="./assets/icons/settings.png" alt="Settings" />
+                    <span>Settings</span>
+                </a>
             </div>
-            <div class = "center">
-                <form action="/search" method="get" class="search-form">
-                    <input type="text" id="search" name="search" placeholder="Search for cities">
-                </form>
-                <div class = "center-1">
-                    <div class = "center-3">
-                        <div class = "center-4">
-                            <p><b>New Delhi</b><br><span class = "rain-info">Chance of Rain: 0%</span></p>
-                        </div>
-                        <div class = "center-4">
-                            <p><b><span class = "temperature">31°</span></b></p>
-                        </div>
+            <div class="content">
+                <!-- Search Bar -->
+                <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search for cities"
+                />
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div>
+                        <h1 class="title-city">New Delhi</h1>
+                        <p>Chance of rain: 0%</p>
+
+                        <h1 class="temperature"><b>31°</b></h1>
                     </div>
-                    <div class = "center-3">
-                        <img src = "icons/sun.png">
-                    </div>
+
+                    <img src="./assets/images/sun.png" alt="Sun" width="180px" />
                 </div>
-                <div class = "center-2">
-                    <b>Today's Forecast</b>
-                    <table id = "forecast-table">
+                <div class = "forecast">
+                    <h4><b>Today's Forecast</b></h4>
+
+                    <!--Forecast Table -->
+                    <table class = "forecast-table">
                         <tr>
                             <td>
-                                <table>
+                                <table class = "forecast-data">
                                     <tr><td>6:00AM</td></tr>
-                                    <tr><td><img src="icons/partly-cloudy.png"></td></tr>
-                                    <tr><td>25°</td></tr>
+                                    <tr><td><img src = "./assets/images/cloud.png" alt = "Cloudy" width = "48px"> </td></tr>
+                                    <tr><td><b>25°</b></td></tr>
                                 </table>
                             </td>
                             <td>
-                                <table>
+                                <table class = "forecast-data">
                                     <tr><td>9:00AM</td></tr>
-                                    <tr><td><img src="icons/sun.png"></td></tr>
-                                    <tr><td>27°</td></tr>
+                                    <tr><td><img src = "./assets/images/sun.png" alt = "Sun" width = "48px"> </td></tr>
+                                    <tr><td><b>27°</b></td></tr>
                                 </table>
                             </td>
                             <td>
-                                <table>
+                                <table class = "forecast-data">
                                     <tr><td>12:00PM</td></tr>
-                                    <tr><td><img src="icons/sun.png"></td></tr>
-                                    <tr><td>36°</td></tr>
+                                    <tr class = "forecast-img"><td><img src = "./assets/images/sun.png" alt = "Sun" width = "48px"> </td></tr>
+                                    <tr><td><b>31°</b></td></tr>
                                 </table>
                             </td>
                             <td>
-                                <table>
+                                <table class = "forecast-data">
                                     <tr><td>3:00PM</td></tr>
-                                    <tr><td><img src="icons/partly-cloudy.png"></td></tr>
-                                    <tr><td>31°</td></tr>
+                                    <tr><td><img src = "./assets/images/partly-Cloudy.png" alt = "Partly-cloudy" width = "48px"> </td></tr>
+                                    <tr><td><b>36°</b></td></tr>
                                 </table>
                             </td>
                             <td>
-                                <table>
+                                <table class = "forecast-data">
                                     <tr><td>6:00PM</td></tr>
-                                    <tr><td><img src="icons/cloud.png"></td></tr>
-                                    <tr><td>27°</td></tr>
+                                    <tr><td><img src = "./assets/images/cloud.png" alt = "Cloudy" width = "48px"> </td></tr>
+                                    <tr><td><b>25°</b></td></tr>
                                 </table>
                             </td>
                             <td>
                                 <table>
                                     <tr><td>9:00PM</td></tr>
-                                    <tr><td><img src="icons/cloud.png"></td></tr>
-                                    <tr><td>22°</td></tr>
+                                    <tr><td><img src = "./assets/images/cloudy-night.png" alt = "Cloudy-night" width = "48px"> </td></tr>
+                                    <tr><td><b>22°</b></td></tr>
                                 </table>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div class = "center-2">
-                    <b>Air Conditions</b>
-                    <table id = "condition-table">
+
+                <!--Air Conditions-->
+                <div class = "conditions">
+                    <h4><b>Air Conditions</b></h4>
+                    <table class = "conditions-table">
                         <tr>
-                            <td>
-                                <table>
-                                    <tr><td id = "heading">Real Feel</td></tr>
-                                    <tr><td id = "value">30°</td></tr>
-                                </table>
-                            </td>
-                            <td>
-                                <table>
-                                    <tr><td id = "heading">Wind</td></tr>
-                                    <tr><td id = "value">0.2 km/hr</td></tr>
-                                </table>
-                            </td>
+                            <td><table class = "conditions-stats">
+                                <tr><td width = "30px"><img src = "./assets/icons/temperature.png" alt = "temperature" class = "conditions-img"></td><td>Real Feel</td></tr>
+                                <tr><td></td><td class = "stats">30°</td></tr>
+                            </table></td>
+                            <td><table class = "conditions-stats">
+                                <tr><td width = "30px"><img src = "./assets/icons/windy.png" alt = "wind" class = "conditions-img"></td><td>Wind</td></tr>
+                                <tr><td></td><td class = "stats">0.2km/hr</td></tr>
+                            </table></td>
                         </tr>
                         <tr>
-                            <td>
-                                <table>
-                                    <tr><td id = "heading">Chance of Rain</td></tr>
-                                    <tr><td id = "value">0%</td></tr>
-                                </table>
-                            </td>
-                            <td>
-                                <table>
-                                    <tr><td id = "heading">UV Index</td></tr>
-                                    <tr><td id = "value">3</td></tr>
-                                </table>
-                            </td>
+                            <td><table class = "conditions-stats">
+                                <tr><td width = "30px"><img src = "./assets/icons/droplet.png" alt = "chance of rain" class = "conditions-img"></td><td>Chance of Rain: </td></tr>
+                                <tr><td></td><td class = "stats">0%</td></tr>
+                            </table></td>
+                            <td><table class = "conditions-stats">
+                                <tr><td width = "30px"><img src = "./assets/icons/sun.png" alt = "uv-index" class = "conditions-img"></td><td>UV Index</td></tr>
+                                <tr><td></td><td class = "stats">3</td></tr>
+                            </table></td>
                         </tr>
                     </table>
                 </div>
             </div>
+
+            <!-- right -->
             <div class = "right">
-                <b>7-Day Forecast</b>
-                <table id="seven-day">
-                    <tr>
-                        <td>
-                            Today
-                        </td>
-                        <td>
-                            <img src = "icons/sun.png">
-                            Sunny
-                        </td>
-                        <td>
-                            <b>36°</b>/22°
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Monday
-                        </td>
-                        <td>
-                            <img src = "icons/cloud.png">
-                            Cloudy
-                        </td>
-                        <td>
-                            <b>32°</b>/21°
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Tuesday
-                        </td>
-                        <td>
-                            <img src = "icons/light-rain.png">
-                            Light-Rain
-                        </td>
-                        <td>
-                            <b>30°</b>/20°
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Wednesday
-                        </td>
-                        <td>
-                            <img src = "icons/thunderbolt.png">
-                            Thunderstorm
-                        </td>
-                        <td>
-                            <b>27°</b>/20°
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Thursday
-                        </td>
-                        <td>
-                            <img src = "icons/partly-cloudy.png">
-                            Partly-Cloudy
-                        </td>
-                        <td>
-                            <b>30°</b>/22°
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Friday
-                        </td>
-                        <td>
-                            <img src = "icons/sun.png">
-                            Sunny
-                        </td>
-                        <td>
-                            <b>32°</b>/23°
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Saturday
-                        </td>
-                        <td>
-                            <img src = "icons/sun.png">
-                            Sunny
-                        </td>
-                        <td>
-                            <b>35°</b>/25°
-                        </td>
-                    </tr>
-                </table>
+                <div class = "spacer"></div>
+                <div class="sidebar">
+
+                    <p class="side-heading"><b>7-Day Forecast</b></p>
+                    <!--Seven Day Forecast Table -->
+                    <table class="table">
+                        <tr>
+                            <td>Today</td>
+                            <td class = "table-middle"><img src = "./assets/images/sun.png" alt = "Sun">Sunny</td>
+                            <td><b>36°</b>/22°</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Tomorrow</td>
+                            <td class = "table-middle"><img src = "./assets/images/partly-Cloudy.png" alt = "Partly-Cloudy">Partly-Cloudy</td>
+                            <td><b>35°</b>/25°</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Friday</td>
+                            <td class = "table-middle"><img src = "./assets/images/sun.png" alt = "Sun">Sunny</td>
+                            <td><b>38°</b>/25°</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Saturday</td>
+                            <td class="table-middle"><img src = "./assets/images/cloud.png" alt = "Cloudy">Cloudy</td>
+                            <td><b>32°</b>/24°</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Sunday</td>
+                            <td class="table-middle"><img src = "./assets/images/rainy.png" alt = "Rain">Rain</td>
+                            <td><b>30°</b>/19°</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Monday</td>
+                            <td class = "table-middle"><img src = "./assets/images/thunderstorm.png" alt = "thunderstorm">Thunderstorm</td>
+                            <td><b>31°</b>/25°</td>
+                        </tr>
+    
+                        <tr>
+                            <td>Tuesday</td>
+                            <td><img src = "./assets/images/sun.png" alt = "Sun">Sunny</td>
+                            <td><b>37°</b>/25°</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
+            </div>
+
     </body>
 </html>
